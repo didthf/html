@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 스타일</title>
+    <style>
+        /* 스타일 바로 밑에 붙여넣기 */ 
+        /* 글꼴 적용 안될때 font-face 앞에 import url 두기 */
+         @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+        @font-face {
+            font-family: 'GMarketSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+            font-weight: 300;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'GMarketSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'GMarketSans';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PyeongchangPeace';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+            font-weight: 300;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'PyeongchangPeace';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+    
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .font {
+            font-size: 30px;
+            font-weight: 700;
+            font-style: italic;
+            font-family: 'GMarketSans';
+        }
+
+        .font_02 {
+            font-size: 50px;
+            font-weight: 700;
+            font-style: italic;
+            font-family: 'PyeongchangPeace';
+        }
+
+        .font_03 {
+            font-size: 30px;
+            font-weight: 400;
+            font-style: italic;
+            font-family: "Instrument Serif", serif;
+            color: blueviolet;
+            text-align: center;
+            /* left, center, right, justify=양끝 정렬*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="font">
+        폰트 스타일
+    </div>
+    <div class="font_02">
+        폰트 스타일 2
+    </div>
+    <div class="font_03">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio nobis quam numquam repellendus eligendi tempore
+        architecto placeat voluptatem reiciendis porro laborum natus obcaecati perferendis accusamus, qui voluptates
+        magni corrupti harum.
+    </div>
+</body>
+
+</html>

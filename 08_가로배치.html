@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로배치</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            display: flex; 
+            /* display는 적용하려는 것 위에 작성 */
+            /* 자식 요소 가로배치 */
+            gap: 12px;
+            /* gap: 간격 */
+            /* display: flex; 가 있을 때만 가능 */
+        } /* 가로배치하려는 요소인 li의 부모인 menu에게 display: flex; 적용*/
+
+        .menu li {
+            list-style: none;
+            height: 50px;
+            border: solid 1px violet;
+            border-radius: 30px;
+            line-height: 50px; 
+            /* margin-right: 12px; */
+            padding: 0 20px;
+        }
+
+        .list {
+            display: flex; 
+            gap: 32px;
+
+        }
+
+        .list .item {
+            width: 432px;
+            
+        }
+
+        .list .item img {
+            width: 432px;
+            height: 560px;
+            display: block; /* img와 p 사이 틈을 없애줌 */
+            
+
+        }
+
+        .list .item p {
+            margin-top: 24px;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            background-color: rgb(252, 204, 228);
+
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="menu"> <!-- 부모 --> <!-- 부모 위에는 부모 혹은 조상 -->
+        <li>menu 1</li> <!-- 자식 -->
+        <li>menu 2</li> <!-- 자식끼리는 형제 사이 -->
+        <li>menu 3</li>
+        <li>menu 4</li>
+        <li>menu 5</li>
+    </ul> <!-- menu -->
+
+    <div class="list">
+        <div class="item">
+            <img src="img/anita-austvika-bc8EcY6tevc-unsplash.jpg" alt="">
+            <p>아이템 1</p>
+        </div> <!-- item -->
+
+        <div class="item">
+            <img src="img/lightman-qian-LCQtmhq5zV8-unsplash.jpg" alt="">
+            <p>아이템 2</p>
+        </div> <!-- item -->
+        
+        <div class="item">
+            <img src="img/paul-yong-7AfPX6i0Isk-unsplash.jpg" alt="">
+            <p>아이템 3</p>
+        </div> <!-- item -->
+
+    </div> <!-- list -->
+</body>
+</html>
