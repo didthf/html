@@ -11,60 +11,175 @@
             padding: 0;
         }
 
-        .section1 {
-            background-color: rgb(168, 168, 168);
+        .section-01 {
+            background-color: rgb(199, 198, 198);
             padding: 120px 0;
         }
 
-        .section1 .box {
+        .section-01 .inner {
             width: 1280px;
-            margin: 0 auto; 
-            display: flex;   
-            justify-content: space-between;
-            align-items: center; 
-        }
-
-        .section1 .box .text {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between; /* 수평정렬 */
+            align-items: center;
             
         }
 
-        .section1 .box .text h1 {
-            font-size: 50px;
+
+        .section-01 .inner .text_wrap h2 {
+            font-size: 80px;
             margin-bottom: 60px;
-        
+            line-height: 1;
+            /* line-height 숫자값은 font-size의 배수 / <행간> */
         }
 
-        .section1 .box .text h2 {
+        .section-01 .inner .text_wrap .text h3 {
+            font-size: 32px;
             margin-bottom: 20px;
         }
-        .section1 .box .text p {
-            font-size: ;
+
+        .section-01 .inner .text p {
+            font-size: 16px;
         }
 
-        .section1 .box img {
+        .section-01 .inner img {
             width: 735px;
             height: 550px;
-            
+            object-fit: cover;
+            /* 이미지 비율에 맞게 */
         }
+
+        /* section-02 */
+        
+
+        .section-02 .inner {
+            width: 1280px;
+            margin: 120px auto; /*  화면 중앙 배치 */
+        }
+
+        .section-02 .inner .title {
+            margin-bottom: 50px;
+        }
+
+        .section-02 .inner .title h2 {
+            font-size: 80px;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+
+        .section-02 .inner .list {
+            display: flex; 
+            justify-content: space-between;   
+            /* (display: flex;)-(justify-content: space-between;) 세트 */
+        }
+
+        .section-02 .inner .list .item {
+            background-color: rgb(199, 198, 198);
+            width: 299px;
+            height: 360px;
+            padding: 36px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 16px;
+        }
+
+        .section-02 .inner .list .item .text span {
+            font-size: 14px;
+            background-color: white;
+            width: 80px;
+            height: 30px;
+            display: block;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-bottom: 20px;
+        } /* item의 자손 */
+
+        .section-02 .inner .list .item .text h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+       
+        .section-02 .inner .list .item > span {
+            color: slategray;
+        } /* item의 자식 */
+        
+        /* 선택자 >는 자식 선택자 선택
+        > 없으면 자식, 자손 모두 선택 */
+
     </style>
 </head>
 
 <body>
-    <div class="section1">
-        <div class="box">
-            <div class="text">
-                <h1>PRODUCT</h1>
-
-                <h2>WEB & APP SERVICE</h2>
-                <p>웹과 앱을 아우르는 통합 디지털 플랫폼을 통해<br />
-                    사용자 중심의 경험과 안정적인 서비스를 제공합니다. <br />
-                    기획부터 디자인, 개발까지 <br />
-                    완성도 높은 웹 앱 솔루션을 소개합니다. </p>
-            </div> <!-- text -->
+    <div class="section-01">
+        <div class="inner">
+            <div class="text_wrap">
+                <h2>PRODUCT</h2>
+                <div class="text">
+                    <h3>WEB & APP SERVICE</h3>
+                    <p>웹과 앱을 아우르는 통합 디지털 플랫폼을 통해<br />
+                        사용자 중심의 경험과 안정적인 서비스를 제공합니다. <br />
+                        기획부터 디자인, 개발까지 <br />
+                        완성도 높은 웹·앱 솔루션을 소개합니다. </p>
+                </div> <!-- text -->
+            </div> <!-- text_wrap -->
             <img src="img/katie-rosario-QNyRp21hb5I-unsplash.jpg" alt="">
-        </div> <!-- box -->
-        
-    </div> <!-- section1 -->
+        </div> <!-- inner -->
+    </div> <!-- section-01 -->
+
+    <div class="section-02">
+        <div class="inner">
+            <div class="title">
+                <h2>NEWS</h2>
+                <p>웹/앱의 새로운 소식을 알려드립니다.</p>
+            </div> <!-- title -->
+
+            <div class="list">
+
+                <div class="item">
+                    <div class="text">
+                        <span>NEWS</span>
+                        <h3>[UPDATE] 모바일 앱 v2.5 정식 출시</h3>
+                        <p>앱 성능과 사용성을 대폭 개선한 v2.5 업데이트가 배포되었습니다.</p>
+                    </div> <!-- text -->
+                    <span>26.01.30</span>
+                </div> <!-- item 1 -->
+
+                <div class="item">
+                    <div class="text">
+                        <span>NEWS</span>
+                        <h3>웹 서비스 리뉴얼 업데이트 안내</h3>
+                        <p>서비스 메인 페이지와 대시보드 UI가 새롭게 개편되었습니다.</p>
+                    </div> <!-- text -->
+                    <span>26.01.30</span>
+                </div> <!-- item 2 -->
+
+                <div class="item">
+                    <div class="text">
+                        <span>NEWS</span>
+                        <h3>UX 리서치 결과 리포트 공개</h3>
+                        <p>최근 진행된 웹/앱 UX 테스트 결과 리포트를 공개합니다.</p>
+                    </div> <!-- text -->
+                    <span>26.01.30</span>
+                </div> <!-- item 3 -->
+
+                <div class="item">
+                    <div class="text">
+                        <span>NEWS</span>
+                        <h3>신규 기능:실시간 알림 센터 추가</h3>
+                        <p>웹과 앱에서 동일하게 사용할 수 있는 실시간 알림 센터 기능이 추가되었습니다.</p>
+                    </div> <!-- text -->
+                    <span>26.01.30</span>
+
+                </div> <!-- item 4 -->
+
+            </div> <!-- list -->
+
+        </div> <!-- inner -->
+    </div><!-- section-02 -->
 </body>
 
 </html>
