@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와이퍼 슬라이드</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/15.css">
+</head>
+
+
+<body>
+    <!-- 스와이퍼 데모 -->
+
+    <section class="main_visual">
+        <!-- swiper -->
+        <div class="swiper mySwiper"> <!-- swiper -->
+            <div class="swiper-wrapper"> <!-- swiper-wrapper -->
+                <div class="swiper-slide"> <!-- swiper-slide --> <!-- 손대면  안됨 (고정값) -->
+                    <img src="img/katie-rosario-QNyRp21hb5I-unsplash (1).jpg" alt="">
+                </div> <!-- swiper-slide -->
+
+                <div class="swiper-slide">
+                    <img src="img/katie-rosario-QNyRp21hb5I-unsplash.jpg" alt="">
+                </div> <!-- swiper-slide -->
+
+                <div class="swiper-slide">
+                    <img src="img/deva-williamson-ntfGWVbBiO0-unsplash.jpg" alt="">
+                </div> <!-- swiper-slide -->
+
+            </div> <!-- swiper-wrapper -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div> <!-- swiper mySwiper -->
+    </section> <!-- main_visual -->
+
+
+    <section class="section-01">
+        <!-- Swiper -->
+        <div class="swiper mySwiper-01">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+            </div> <!-- swiper-wrapper -->
+
+            <div class="swiper-pagination"></div>
+        </div> <!-- swiper mySwiper-01 -->
+
+    </section> <!-- section-01 -->
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        var swiper = new Swiper(".mySwiper-01", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script> <!-- script는 제일 밑에 작성 -->
+
+</body>
+
+</html>
