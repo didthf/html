@@ -18,12 +18,13 @@ a {
 .section-01 .list {
     max-width: 900px; /* 최대크기 900px */
     /* width: 100%; */
-    width: calc(100% - 40px); /* 좌우20px씩 띄우기 */
-    /* calc() => 괄호안에 연산식 *(곱셈), /(나누기), +(덧셈), -(뺄셈) !기호 앞뒤로 띄어쓰기! * /
+    width: calc(100% - 40px); 
+    /* 좌우20px씩 띄우기 */
+    /* calc() => 괄호안에 연산식 *(곱셈), /(나누기), +(덧셈), -(뺄셈) !기호 앞뒤로 띄어쓰기! */
+
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    /* 중앙 배치 */
+    margin: 0 auto; /* 중앙 배치 */
 }
 
 .section-01 .list .item {
