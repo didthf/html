@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 80px;    
+}
+
+.section-01 {
+    background-color: rgb(180, 255, 177);
+    padding: 100px 0;
+}
+.section-01 .inner {
+    max-width: 1280px;
+    width: 100%;
+    /* 컨테이너 크기에게만 max-width: ~~px */ /* 아이템은 ~~% */
+    margin: 0 auto;
+    background-color: rgb(135, 247, 255);
+}
+.section-01 .inner h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.section-01 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.section-01 .inner .list .item {
+    /* width: 229px; */
+    width: 24%;
+    background-color: aliceblue;
+    padding: 20px;
+}
+.section-01 .inner .list .item p {}
+
+
+/* 화면의 크기가 1024px 이하일 때 스타일 변화 */  /* (max-width:1024px) 태블릿 */
+@media screen and (max-width:1024px) {
+    h1 {
+        font-size: 40px;
+        color: rgb(255, 11, 141);
+    }
+} /* max-width:1024px */
+
+/* 화면의 크기가 768px 이하일 때 스타일 변화 */
+@media screen and (max-width:768px) {
+    h1 {
+        font-size: 20px;
+        color: rgb(97, 192, 1);
+    }
+    .section-01 .inner .list {
+        flex-wrap: wrap; 
+        row-gap: 20px; 
+        /* 줄 바꿈 */
+    }
+
+    .section-01 .inner .list .item {
+        width: 49%; 
+    }
+
+
+} /* max-width:768px */
+
+/* 화면의 크기가 480px 이하일 때 스타일 변화 */ /* (max-width:480px) 모바일 */
+@media screen and (max-width:480px) {
+    body {background-color: rgb(153, 229, 231);}
+    h1 {
+        font-size: 16px;
+        color: blueviolet;
+        text-align: left;
+    }
+    .section-01 .inner .list .item {
+        width: 100%;
+    }
+
+} /* max-width:480px */

@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    /* inherit= 상속받기 */
+
+}
+
+.header {
+    height: 100px;
+    background-color: rgb(255, 255, 200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.header .nav .gnb {
+    display: flex;
+    gap: 40px;
+}
+
+.header .utill {
+    display: flex;
+    gap: 20px;
+}
+
+.main_visual {
+    background-color: aquamarine;
+    height: 100vh;
+}
+
+.main_visual h2 {
+    font-size: 100px;
+    text-align: center;
+    line-height: 100vh;
+}
+
+.section-01 {
+    background-color: #8cdcfc;
+    padding: 120px 0;
+}
+
+.section-01 .inner {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    /* background-color: aliceblue; */
+}
+
+.section-01 .inner h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.section-01 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-01 .inner .list .item {
+    width: 305px;
+    height: 305px;
+    background-color: rgb(247, 252, 183);
+
+}
+
+.section-02 {
+    padding: 120px 0;
+   
+}
+
+.section-02 .inner {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-02 .inner h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-02 .inner .list .item {
+    width: 305px;
+}
+
+.section-02 .inner .list .item img {
+    width: 305px;
+    height: 305px;
+    object-fit: cover; /* 비율 예쁘게 */
+}
+
+.section-03 {
+    padding: 120px 0;
+    background-color: beige;
+}
+.section-03 .inner {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+.section-03 .inner h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.section-03 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.section-03 .inner .list .item {
+    width: 305px;
+    height: 305px;
+    position: relative;
+}
+.section-03 .inner .list .item a {}
+
+.section-03 .inner .list .item a img {
+    width: 305px;
+    height: 305px;
+    object-fit: cover;
+}
+.section-03 .inner .list .item a p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(240, 255, 255, 0.692);
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+
+}
+
+.footer {
+    background-color: rgb(181, 101, 192);
+    padding: 100px;
+    text-align: center;
+    color: #ffffff;
+}
