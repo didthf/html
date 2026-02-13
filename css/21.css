@@ -1,0 +1,217 @@
+/* 웹폰트 연결 눈누 */
+@font-face {
+    font-family: 'Mulmaru';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-4@1.1/Mulmaru.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Mulmaru';
+}
+
+/* 공통요소 */
+.inner {
+    max-width: 1280px;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+
+.header {}
+
+.header .inner {
+    display: flex;
+    justify-content: space-between
+}
+
+.header .inner .logo {}
+
+.header .inner .nav {}
+
+.header .inner .nav .gnb {
+    display: flex;
+    gap: 40px;
+}
+
+.header .inner .nav .gnb li a {}
+
+/* main */
+.main {}
+
+.main .main_visual {
+    height: 100vh;  /* ??? */
+    background: #91e0ff;
+    background: linear-gradient(180deg, rgba(145, 224, 255, 1) 0%, rgba(208, 178, 247, 1) 100%);
+    display: flex;
+    align-items: center;
+}
+
+.main .main_visual .inner {}
+.main .main_visual .inner h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.main .main_visual .inner p {
+    margin-bottom: 60px;
+    font-size: 18px;
+}
+
+.main .main_visual .inner a {
+    background-color: white;
+    width: 139px;
+    height: 59px;
+    display: block; 
+    border-radius: 20px;
+    line-height: 59px;
+    text-align: center;
+}
+
+.main .section-01 {}
+.main .section-01 .inner {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+.main .section-01 .inner .title {
+    text-align: center;
+}
+
+.main .section-01 .inner .title h3 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.main .section-01 .inner .title p {
+    margin-bottom: 60px;
+}
+
+/* section-01 */
+.main .section-01 .inner .list {
+    display: flex;
+    justify-content: space-between;
+    
+}    
+.main .section-01 .inner .list .item {
+    width: 32%;
+    height: 400px;
+    position: relative;
+    
+}
+.main .section-01 .inner .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+}
+.main .section-01 .inner .list .item .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    padding: 40px;
+}
+.main .section-01 .inner .list .item .text strong {
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.main .section-01 .inner .list .item .text p {
+    margin-top: 12px;
+}
+
+/* section-02 */
+.main .section-02 {
+    background-color: #c2eeff;
+}
+.main .section-02 .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 0;
+}
+
+.main .section-02 .inner .box {}
+.main .section-02 .inner .box .title {
+    margin-bottom: 41px;
+}
+.main .section-02 .inner .box .title h3 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.main .section-02 .inner .box .title p {}
+.main .section-02 .inner .box .text {}
+.main .section-02 .inner .box .text p {
+    margin-bottom: 16px;
+}
+.main .section-02 .inner img {
+    width: 60%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/* section-03 */
+
+.main .section-03 {}
+.main .section-03 .inner {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    
+
+}
+.main .section-03 .inner .title {
+    margin-bottom: 60px;   
+    text-align: center;
+}
+
+.main .section-03 .inner .title h3 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.main .section-03 .inner .title p {}
+
+.main .section-03 .inner .list {
+    display: flex;
+    justify-content: space-between
+
+}
+.main .section-03 .inner .list .item {
+    width: 24%;
+    height: 400px;
+    position: relative;
+}
+.main .section-03 .inner .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main .section-03 .inner .list .item .text {
+    background-color: rgba(240, 255, 255, 0.493);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
+.main .section-03 .inner .list .item .text strong {
+    font-size: 20px;
+    font-weight: bold;
+}
+.main .section-03 .inner .list .item .text p {
+    margin-top: 12px;
+}
