@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 공통된 스타일 */
+.inner {
+    max-width: 1280px;
+    width: calc(100% - 48px);
+    margin: 120px auto;
+}
+
+.title h3 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.title p {
+    font-size: 18px;
+}
+
+.header {
+    height: 100px;
+    background-color: rgb(255, 255, 176);
+}
+
+.header .inner {
+    height: 100%; /* 글씨 가운데 배치 (부모에게  height값 주고 자식에 정렬)*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header .inner .nav .gnb {
+    display: flex;
+    gap: 60px;
+}
+
+.main_visual {
+    height: 100vh;
+    background-color: rgb(185, 253, 255);
+    display: flex;
+    align-items: center;
+}
+
+.main_visual .text {
+    max-width: 1280px;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+.main_visual .text h2 {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+.main_visual .text p {
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+.main_visual .text a {
+    width: 139px;
+    height: 59px;
+    background-color: white;
+    border-radius: 12px;
+    display: block;
+    text-align: center;
+    line-height: 59px;
+}
+
+/* section-01  */
+.section-01 {}
+.section-01 .inner {}
+.section-01 .inner .title {
+    margin-bottom: 60px;
+    text-align: center;
+}
+.section-01 .inner .title h3 {}
+.section-01 .inner .title p {}
+
+.section-01 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.section-01 .inner .list .item {
+    width: 32%;
+    border: 1p solid #cccccc;
+    border-radius: 12px;
+    overflow: hidden; /* ? 넘치는 컨텐츠 숨기기 */
+}
+.section-01 .inner .list .item a {}
+.section-01 .inner .list .item a img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.section-01 .inner .list .item a .text {
+    padding: 40px;
+}
+.section-01 .inner .list .item a .text strong {
+    margin-bottom: 12px;
+    display: block;
+    font-size: 24px;
+}
+.section-01 .inner .list .item a .text p {}
+
+
+/* section-02 */
+.section-02 {
+    background-color: rgb(189, 239, 243);
+    padding: 120px 0;
+}
+.section-02 .inner {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.section-02 .inner .text_box {
+    width: 34%;
+}
+.section-02 .inner .text_box .title {
+    margin-bottom: 41px;
+}
+.section-02 .inner .text_box .title h3 {}
+.section-02 .inner .text_box .title p {}
+
+.section-02 .inner .text_box .list {}
+.section-02 .inner .text_box .list li {
+    margin-bottom: 16px;
+}
+
+.section-02 .inner img {
+    width: 58%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* section-03 */
+.section-03 {}
+.section-03 .inner {}
+.section-03 .inner .title  {
+    margin-bottom: 60px;
+    text-align: center;
+}
+.section-03 .inner .title h3  {}
+.section-03 .inner .title p  {}
+
+.section-03 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.section-03 .inner .list .item {
+    width: 24%;
+    border: 1p solid #cccccc;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+
+}
+.section-03 .inner .list .item a {}
+.section-03 .inner .list .item a img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+.section-03 .inner .list .item a .text {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #cccccc98;
+    backdrop-filter: blur(7px); 
+    /* transform: translateY(100%);
+    transition: 0.5s;  /* 움직이는 속도 */ 
+    display: none; /* transition 사용불가 */
+
+}
+.section-03 .inner .list .item:hover .text  {
+    /* transform: translateY(0); */
+    display: block;
+}
+.section-03 .inner .list .item a .text strong {}
+.section-03 .inner .list .item a .text p {}
+
+
+
+
+/* 화면의 크기가 1024px 이하일 때 스타일 변경 */
+@media screen and (max-width: 1024px)  {
+    .section-02 .inner {flex-direction: column;} /* 정렬 아래로 */
+    .section-02 .inner .text_box {width: 100%;}
+    .section-02 .inner img {width: 100%; order: -1;} 
+    /*order  0을 기준으로 -1:앞으로 이동 1:뒤로 이동*/ /* 부모에게 display: flex;가 있어야 적용가능 */ 
+    
+} /* 1024px */
