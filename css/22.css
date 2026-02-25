@@ -14,6 +14,10 @@ a {
 }
 
 /* 공통된 스타일 */
+.mobile {
+    display: none;
+}
+
 .inner {
     max-width: 1280px;
     width: calc(100% - 48px);
@@ -30,7 +34,14 @@ a {
 
 .header {
     height: 100px;
-    background-color: rgb(255, 255, 176);
+    width: 100%;
+    background-color: rgba(255, 255, 176, 0.486);
+    backdrop-filter: blur(7px);
+    /* 고정 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* 고정 */   
 }
 
 .header .inner {
@@ -45,6 +56,8 @@ a {
     display: flex;
     gap: 60px;
 }
+
+
 
 .main_visual {
     height: 100vh;
@@ -199,11 +212,162 @@ a {
 
 
 
-/* 화면의 크기가 1024px 이하일 때 스타일 변경 */
+/* 화면의 크기가 1024px 이하일 때 스타일 변경 (태블릿)*/
 @media screen and (max-width: 1024px)  {
-    .section-02 .inner {flex-direction: column;} /* 정렬 아래로 */
-    .section-02 .inner .text_box {width: 100%;}
-    .section-02 .inner img {width: 100%; order: -1;} 
+    .nav {display: none;}
+    .mobile {display: block;}
+
+    /* 모바일 네비게이션 */
+    .mobile_nav {
+        width: 50%;
+        height: 100vh;
+        background-color: azure;
+        position: fixed;
+        top: 100px;
+        right: 0;
+        display: none;
+    } /* 자바스크립트를 활용해서 구현*/
+    .mobile_nav.active {
+        display: block;
+    }
+
+    .inner {margin: 100px auto;}
+    .section-01 .inner .title {
+        margin-bottom: 40px;
+    }
+    .section-01 .inner .list .item a .text {
+        padding: 20px;
+    }
+
+
+    .section-02 {
+        padding: 100px 0;
+    }
+    .section-02 .inner {
+        flex-direction: column;
+    } /* 정렬 아래로 */
+
+    .section-02 .inner .text_box .title {
+        margin-top: 40px;
+    }
+    .section-02 .inner .text_box {
+        width: 100%;
+    }
+    .section-02 .inner img {
+        width: 100%; order: -1;
+    } 
     /*order  0을 기준으로 -1:앞으로 이동 1:뒤로 이동*/ /* 부모에게 display: flex;가 있어야 적용가능 */ 
-    
+    .section-03 .inner .title {
+        margin-bottom: 40px;
+    }
+    .section-03 .inner .list {
+        flex-wrap: wrap; /* 밑으로 보내기 */
+        row-gap: 20px;
+    }
+    .section-03 .inner .list .item {
+        width: 49%;
+        
+    }
+    .section-03 .inner .list .item a img {
+        width: 100%;
+    }
+
+    .section-03 .inner .list .item a .text {
+        width: 100%;
+        display: block;
+        padding: 20px;
+    }
+   
+
 } /* 1024px */
+
+
+/* display:flex ;  (얘만 부모에게 작성)
+   display:block ;
+   display:none ; 원래 있던걸 없애기
+   display:inline-blick ;
+*/
+
+/* 화면의 크기가 480px 이하일 때 스타일 변경 (모바일) */
+@media screen and (max-width:480px) {
+    .inner {
+        width: calc(100% - 32px); /* 16+16=32 */
+        margin: 60px auto;
+    }
+
+    /* .title h3 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    } */
+
+    .main_visual .text {
+        text-align: center; 
+    }
+    .main_visual .text h2 {
+        font-size: 40px;
+    }
+    .main_visual .text p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    .main_visual .text a {
+        margin: 0 auto;
+    }
+    
+    .section-01 .inner .title {
+        margin-bottom: 20px;
+    }
+    .section-01 .inner .title h3 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+    .section-01 .inner .title p{
+        font-size: 16px;
+    }
+    .section-01 .inner .list {
+        flex-wrap: wrap; /* display:flex; 한곳에 */
+        row-gap: 20px;
+    }
+    .section-01 .inner .list .item {
+        width: 100%;
+    }
+
+    
+    .section-02 {
+        padding: 60px 0;
+    }
+    .section-02 .inner .text_box .title {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    .section-02 .inner .text_box .title h3 {
+        font-size: 32px;
+        margin-bottom: 16px;
+        
+    }
+    .section-02 .inner .text_box .title p {
+        font-size: 16px;
+    }
+
+
+
+    .section-03 .inner .title {
+        margin-bottom: 20px;
+    }
+    .section-03 .inner .title h3 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+    .section-03 .inner .title p {
+        font-size: 16px;
+    }
+    .section-03 .inner .list {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .section-03 .inner .list .item {
+        width: 100%;
+    }
+
+} /* 480px */
+
